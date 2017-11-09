@@ -36,10 +36,11 @@ function driversByName (driver) {
 
 function totalRevenue (driver) {
   let totalAmounter = 0;
+  //reduce takes in two parameters. A function and starting point which is 0
   totalAmounter = driver.reduce(function (beginningDriver, nextDriver) {
-    let totaling = 0;
-    totaling = beginningDriver + nextDriver.revenue;
-    return totaling;
+    let totalingSequence = 0;
+    totalingSequence = beginningDriver + nextDriver.revenue;
+    return totalingSequence;
   }, 0);
   return totalAmounter;
 }
