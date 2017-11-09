@@ -38,9 +38,9 @@ function totalRevenue (driver) {
   let totalAmounter = 0;
   totalAmounter = driver.reduce(function (beginningDriver, nextDriver) {
     let totaling = 0;
-    totaling = beginningDriver.revenue + nextDriver.revenue;
+    totaling = beginningDriver + nextDriver.revenue;
     return totaling;
-  });
+  }, 0);
   return totalAmounter;
 }
 
