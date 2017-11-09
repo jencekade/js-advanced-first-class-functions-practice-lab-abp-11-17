@@ -33,3 +33,18 @@ function driversByName (driver) {
   });
   return sortDriverName;
 }
+
+function totalRevenue (driver) {
+  let totalAmount1 = 0;
+  totalAmount1 = reduce(driver, function (beginningDriver, nextDriver) {
+    return beginningDriver['revenue'] + nextDriver['revenue'];
+
+  },0);
+  return totalAmount1;
+}
+
+function averageRevenue (driver) {
+  let numerator = totalRevenue(driver);
+  let denominator = driver.length;
+  return numerator/denominator;
+}
