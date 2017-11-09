@@ -35,12 +35,13 @@ function driversByName (driver) {
 }
 
 function totalRevenue (driver) {
-  let totalAmount1 = 0;
-  totalAmount1 = reduce(driver, function (beginningDriver, nextDriver) {
-    return beginningDriver['revenue'] + nextDriver['revenue'];
-
-  },0);
-  return totalAmount1;
+  let totalAmounter = 0;
+  totalAmounter = driver.reduce(function (beginningDriver, nextDriver) {
+    let totaling = 0;
+    totaling = beginningDriver.revenue + nextDriver.revenue;
+    return totaling;
+  });
+  return totalAmounter;
 }
 
 function averageRevenue (driver) {
